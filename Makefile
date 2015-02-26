@@ -7,6 +7,8 @@ EXECUTABLE=strsearch
 
 all: $(EXECUTABLE)
 
+rebuild: clean $(EXECUTABLE)
+
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
