@@ -83,7 +83,6 @@ int main(int argc, char ** argv)
     int inputStringSize = INPUT_STRING_DEFAULT_SIZE;
 
     char * pattern = (char *)malloc(inputStringSize);
-    memset(pattern, 0xFF ,inputStringSize);
 
     int pos = 0;
 
