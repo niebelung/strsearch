@@ -105,13 +105,12 @@ int main(int argc, char ** argv)
             pos = 0;
             if(strlen(trimLine(pattern)))
             {
-                printf("QWERTY pattern \"%s\"\n", pattern);
                 if(!strcmp(pattern,"exit"))
                 {
                     finalize(&search);
                     return EXIT_SUCCESS;
                 }
-                const char * result  = (find(&search,pattern)) ? "FOUND" : "NOT FOUND";
+                const char * result  = (find(&search,pattern)) ? "YES" : "NO";
                 printf("%s\n",result);
             }
         }

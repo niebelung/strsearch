@@ -51,13 +51,10 @@ bool find(StrSearch * search, const char * const pattern)
                               ? search->buflen - posInBuf
                               : search->filesize - pos - posInBuf;
 
-        printf("QWERTY patlen %d buflen %d pos %d posInBuf %d bytesToRead %d\n",
-                patlen, search->buflen, pos, posInBuf,bytesToRead);
-
         if(!fread(search->buf + posInBuf, 1, bytesToRead, search->stream))
         {
-            printf("Error reading %d bytes from pos %d to pos in buf %d from stream : %s\n",
-                   bytesToRead, pos, posInBuf, strerror(errno));
+            printf("Error reading %d bytes from pos %d from file : %s\n",
+                   bytesToRead, pos, strerror(errno));
             return false;
         }
 
