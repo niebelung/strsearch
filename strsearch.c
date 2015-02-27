@@ -8,10 +8,8 @@
 
 bool init(StrSearch * search, const char * const path)
 {
-//     search->buf = malloc(STRSEARCH_BUF_LEN);
-//     search->buflen =  STRSEARCH_BUF_LEN;
-    search->buf = malloc(20);
-    search->buflen =  20;
+    search->buf = malloc(STRSEARCH_BUF_LEN);
+    search->buflen =  STRSEARCH_BUF_LEN;
 
     if (NULL == (search->stream = fopen(path, "r")))
     {
